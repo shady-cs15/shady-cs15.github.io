@@ -1,1 +1,169 @@
-Hello, awesome world!
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Satyaki Chakraborty</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="academia.html">Academia</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+      <!--<a id="logo-container" href="#" class="brand-logo"></a>-->
+      <ul class="right hide-on-med-and-down">
+        <li><a href="https://github.com/shady-cs15">github.com/shady-cs15</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-5">PROJECTS</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">feel free to collaborate on github.</h5>
+        </div>
+        <div class="row center">
+          <a href="https://github.com/shady-cs15?tab=repositories" target="_blank" id="download-button" class="btn-large waves-effect waves-light">GITHUB </a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+
+    <div class="parallax"><img src="background-theme.jpg" alt="Unsplashed https://github.com/shady-cs15.github.io/background img 1"></div>
+
+    <div class="parallax"><img src="https://github.com/shady-cs15.github.io/https://github.com/shady-cs15.github.io/background1.jpg" alt="Unsplashed https://github.com/shady-cs15.github.io/background img 1"></div>
+  </div>
+
+  <div class="row">
+        <div class="col s4 m4">
+          <div class="card large z-depth-3">
+            <div class="card-image">
+              <img style="width: 100%; height: 100%" src="images/visodo.jpg">
+              <span class="card-title">Visual Odometry</span>
+            </div>
+            <div class="card-content">
+              <p>Developed visual odometry software for the Karlsruhe drive sequences. It currently uses disparity maps for estimating relative scale between two consecutive poses, thereby minimizing drift. More details mentioned in blog post.</p>
+            </div>
+            <div class="card-action">
+              <a href="https://github.com/shady-cs15/VisualOdometry" target="_blank">GITHUB</a>
+              <a href="#" target="_blank">blog</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s4 m4">
+          <div class="card large z-depth-3">
+            <div class="card-image">
+              <img src="images/stereo.jpg">
+              <span class="card-title grey-text">Stereo Vision Library</span>
+            </div>
+            <div class="card-content">
+              <p>Developed this simple library on top of OpenCV for depth reconstruction from a stereo rig. Contains separate modules for stereo calibration, rectification, reprojection. More details can be found in the blog post.</p>
+            </div>
+            <div class="card-action">
+              <a href="https://github.com/shady-cs15/StereoVisionLibrary" target="_blank">GITHUB</a>
+              <a href="#" target="_blank">blog</a>
+            </div>
+    		<div class="card-reveal">
+      		<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      		<p>Here is some more information about this product that is only revealed once clicked on.</p>
+    		</div>
+          </div>
+        </div>
+
+        <div class="col s4 ">
+          <div class="card large z-depth-3">
+            <div class="card-image">
+              <img height=280 src="images/gsoc15.jpg">
+              <span class="card-title">Wear teleoperation of ArDrones</span>
+            </div>
+            <div class="card-content" style="overflow-y: scroll; height:150px">
+              <p>Worked with JdeRobot in Google Summer of Code 2015 to develop a distributed architecture for remote teleoperation of ArDrones from android wear. The visual feed was further processed using Gaussian Mixture Models (GMMs) to obtain foreground mask of moving vehicles and their traffic density. </p>
+            </div>
+            <div class="card-reveal">
+      			<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+		      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    		</div>
+            <div class="card-action">
+              <a href="https://github.com/RoboticsURJC/JdeRobot-VehicleCounter-GSOC2015" target="_blank">GITHUB</a>
+              <a href="#" target="_blank">blog</a>
+              <a href="https://www.youtube.com/watch?v=VCij_LN1CRU" target="_blank">demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s4 ">
+          <div class="card large z-depth-3">
+            <div class="card-image">
+              <img height=280 src="images/nlp.jpg">
+              <span class="card-title red-text">Crosslingual Parsing</span>
+            </div>
+            <div class="card-content" style="overflow-y: scroll; height:150px">
+              <p>As research interns under Prof. Sudeshna Sarkar we explored recursive neural nets for crosslingual parsing. Our pipeline used a recursive neural network based shift reduce parser (Manning et al.) and a word vector translation matrix learnt from a small bilingual dictionary. A brief summary of the project is given in the report attached.</p>
+            </div>
+            <div class="card-reveal">
+      			<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+		      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    		</div>
+            <div class="card-action">
+              <a href="files/nlp_report.pdf" target="_blank">report</a>
+            </div>
+          </div>
+        </div>
+  </div>
+
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About the Website</h5>
+          <p class="grey-text text-lighten-4">Thanks for visiting this page. This website gives a brief summary of my projects, research and experience. I maintain a blog where I write about my personal interests and findings. Feel free to check them out. Criticism is welcome. </p>
+
+
+        </div>
+        <div class="col l3 s12">
+        
+        </div>
+        <div class="col l3 s12" style="margin-left:200px">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" align="center" href="https://www.facebook.com/satyaki.reloaded">facebook</a></li>
+            <li><a class="white-text" align="center" href="https://twitter.com/Cs15Satyaki">twitter</a></li>
+            <li><a class="white-text" align="center" href="https://in.linkedin.com/in/satyaki-chakraborty-a08b92a7">linked-in</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../../dist/js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+</html>
