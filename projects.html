@@ -18,11 +18,11 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="academia.html">Academia</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
       </ul>
       <!--<a id="logo-container" href="#" class="brand-logo"></a>-->
       <ul class="right hide-on-med-and-down">
-        <li><a href="https://github.com/shady-cs15">github.com/shady-cs15</a></li>
+        <li><a href="https://github.com/shady-cs15" target="_blank">github.com/shady-cs15</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
@@ -61,7 +61,9 @@
               <img style="width: 100%; height: 100%" src="images/visodo.jpg">
               <span class="card-title">Visual Odometry</span>
             </div>
-            <div class="card-content">
+            <div class="card-content" style="overflow-y: scroll; height:150px">
+              <div class="chip">Odometry</div>
+              <div class="chip">Pose graph optimisation</div>
               <p>Developed visual odometry software for the Karlsruhe drive sequences. It currently uses disparity maps for estimating relative scale between two consecutive poses, thereby minimizing drift. More details mentioned in blog post.</p>
             </div>
             <div class="card-action">
@@ -77,7 +79,10 @@
               <img src="images/stereo.jpg">
               <span class="card-title grey-text">Stereo Vision Library</span>
             </div>
-            <div class="card-content">
+            <div class="card-content" style="overflow-y: scroll; height:150px">
+              <div class="chip">Stereo calibration</div>
+              <div class="chip">Epipolar rectification</div>
+              <div class="chip">3D reconstruction</div>
               <p>Developed this simple library on top of OpenCV for depth reconstruction from a stereo rig. Contains separate modules for stereo calibration, rectification, reprojection. More details can be found in the blog post.</p>
             </div>
             <div class="card-action">
@@ -98,6 +103,9 @@
               <span class="card-title">Wear teleoperation of ArDrones</span>
             </div>
             <div class="card-content" style="overflow-y: scroll; height:150px">
+              <div class="chip">Gaussian Mixture Models</div>
+              <div class="chip">Wear Teleoperation</div>
+              <div class="chip">GSoC</div>
               <p>Worked with JdeRobot in Google Summer of Code 2015 to develop a distributed architecture for remote teleoperation of ArDrones from android wear. The visual feed was further processed using Gaussian Mixture Models (GMMs) to obtain foreground mask of moving vehicles and their traffic density. </p>
             </div>
             <div class="card-reveal">
@@ -106,7 +114,6 @@
     		</div>
             <div class="card-action">
               <a href="https://github.com/RoboticsURJC/JdeRobot-VehicleCounter-GSOC2015" target="_blank">GITHUB</a>
-              <a href="#" >blog</a>
               <a href="https://www.youtube.com/watch?v=VCij_LN1CRU" target="_blank">demo</a>
             </div>
           </div>
@@ -119,6 +126,9 @@
               <span class="card-title red-text">Crosslingual Parsing</span>
             </div>
             <div class="card-content" style="overflow-y: scroll; height:150px">
+              <div class="chip">Deep learning</div>
+              <div class="chip">Word vectors</div>
+              <div class="chip">Language parsing</div>
               <p>As research interns under Prof. Sudeshna Sarkar we explored recursive neural nets for crosslingual parsing. Our pipeline used a recursive neural network based shift reduce parser (Manning et al.) and a word vector translation matrix learnt from a small bilingual dictionary. A brief summary of the project is given in the report attached.</p>
             </div>
             <div class="card-reveal">
@@ -137,7 +147,11 @@
               <img src="images/rcnn.jpg">
               <span class="card-title red-text">RCNN (Scene Labeling)</span>
             </div>
-            <div class="card-content">
+            <div class="card-content" style="overflow-y: scroll; height:150px">
+              <div class="chip">Deep learning</div>
+              <div class="chip">RNN</div>
+              <div class="chip">CNN</div>
+              <div class="chip">Scene Labelling</div>
               <p>Multiscale Recurrent Convolutional Neural Networks for scene labeling. (Currently working on it).</p>
             </div>
             <div class="card-action">

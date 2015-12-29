@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Satyaki Chakraborty</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<!--<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>-->
+</head>
+
+
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../academia.html">Academia</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+      </ul>
+      <!--<a id="logo-container" href="#" class="brand-logo"></a>-->
+      <ul class="right hide-on-med-and-down">
+        <li><a href="https://github.com/shady-cs15" target="_blank">github.com/shady-cs15</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+	<!-- cover picture -->
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <!--<h1 class="header center teal-text text-lighten-5">PROJECTS</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">feel free to collaborate on github.</h5>
+        </div>
+        <div class="row center">
+          <a href="https://github.com/shady-cs15?tab=repositories" target="_blank" id="download-button" class="btn-large waves-effect waves-light">GITHUB </a>
+        </div>
+        <br><br>-->
+			</div>
+    </div>
+		<div class="parallax">
+			<img src="../images/visodo.jpg" style="-webkit-filter: blur(5px);
+  -moz-filter: blur(25px);
+  -o-filter: blur(25px);
+  -ms-filter: blur(25px);
+  filter: blur(25px);" alt="Unsplashed https://github.com/shady-cs15.github.io/background img 1">
+		</div>
+  </div>
+
+
+  <!--content-->
+  <br><br>
+  <div class="row" style="margin-left:40px" style="margin-top:40px; margin-right:40px">
+  			<div class="col s12">
+          <div class="card z-depth-4">
+            <div class="card-content" style="margin-left:40px; margin-right:40px;" >
+              <h3 class="teal-text" class="light"> A beginner's tutorial on Visual Odometry </h3>
+              <h5 class="teal-text" class="light">Satyaki Chakraborty</h5>
+              <br>
+              <p style="font-size: 110%" class="light">
+              	Visual Odometry is the process of estimating motion from consecutive image frames captured by one or more cameras. In order to work with visual odometry one needs to ensure that there is sufficient illumination, not too much motion blur and that consecutive scenes overlap to a certain extent. The following tutorial targets the audience who need a basic understanding of the topic.
+              </p> <br>
+
+              <p style="font-size: 110%" class="light">
+              	The process of visual odometry involves several steps including feature extraction, feature matching/feature tracking, computing essential and transformation matrices between consecutive frames and so on. In this tutorial I first show how to compute the transformation matrix between two consecutive frames and then improve on it.
+              </p> <br>
+
+              <p style="font-size: 120%" class="light"><b>
+              	Feature extraction</b>
+              </p>
+
+              <p style="font-size: 110%" class="light">
+              	The first step involves computing and extracting features from the individual frames. These features are to be matched with the features of the next frame to find out the transformation of the camera pose. There are several feature extraction algorithms currently available. The ones supported by OpenCV are SIFT(Scale Invariant Feature Transform), SURF(Speeded Up Robust Features), FAST, BRIEF, ORB etc. The source code that I have shared uses ORB features. The following image shows ORB features computed in an image.
+              </p>
+              <img src="images/orb.jpg"></img>
+              <p style="font-size: 110%" class="light">
+              	The reader is encouraged to take a look at this <a href="http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_feature2d/py_features_meaning/py_features_meaning.html#features-meaning">webpage</a> for more information about feature detection.
+              </p> <br>
+
+              <p style="font-size: 120%" class="light"><b>
+              	Feature matching</b>
+              </p>
+              <p style="font-size: 110%" class="light">
+                Once you have detected the features in the image, the next step is to describe it. Matching features between two frames is done based on these feature descriptors. Feature descriptors usually consist of spatial histograms, high-order Gaussian derivate filters etc. In short, they contain description or information about the features detected. Based on this descriptions, feature matching is performed. While one can stick to the brute force method of matching features (by minimizing the distance norm), a more favoured approach is to use FLANN-based matcher. FLANN (Fast Library for Approximate Nearest Neighbors) is a collection of algorithms optimized for fast nearest neighbor search in large datasets and for high dimensional features. Following is an image showing ORB feature matches (in presence of outliers.)
+              </p>
+              <img src="images/matching.jpg"></img>
+              <p style="font-size: 110%" class="light">
+                The reader is encouraged to take a look at this <a href="http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_feature2d/py_matcher/py_matcher.html#flann-based-matcher">webpage</a> for more information about FLANN-based matcher.
+              </p> <br>
+
+              <p style="font-size: 120%" class="light"><b>
+                Outlier rejection</b>
+              </p>
+              <p style="font-size: 110%" class="light">
+                Outliers refer to incorrect matches between frames. In order to come up with accurate odometry measurements one needs to develop a system which takes care of error introduced due to the presence of outliers. Two common methods for outlier rejection are RANSAC and ratio-test. Ratio test is simpler to implement because it accepts a match if the ratio between the distance measure between the best match and the second best match is less than a certain threshold. Results obtained after using ratio test for outlier rejection is as follows.
+              </p>
+              <img src="images/outlier.jpg"></img>
+              <br> <br>
+
+              <p style="font-size: 120%" class="light"><b>
+                The essential matrix and motion estimation</b>
+              </p>
+              <p style="font-size: 110%" class="light">
+                Motion estimation is the most important of visual odometry. For that we first compute the essential matrix (<b>E</b>) between two consecutive frames. Essential matrix contains the geometric relation between two images.
+              </p>
+              <p style="font-size: 110%" class="light"> The essential matrix, which embeds the geometric transoformation information (upto an unknown scale factor), can be obtained using the epipolar constraint. The epipolar constraint specifies the line on which the corresponding feature <b>p<sup>'</sup></b> (of feature <b>p</b> of one image) on the other image lies. This constraint can be formulated mathematically with the essential matrix as <b>p.E.p<sup>'</sup> = 0</b>. (See the image below to get a better understanding of what epipolar constraint is.) Using this mathematical relation one can compute the essential matrix given that there are at least 5 point correspondences i.e. at least 5 values of <b>p</b> and 5 values of <b>p<sup>'</sup></b>(Nister's 5 pt. algorithm). Alternatively, a more simpler 8 pt. algorithm can be used which uses either 8 feature pt. correspondences or more.
+              </p>
+              <div align="center">
+              <img src="images/epipolar.jpg" align="middle"></img>
+              </div>
+              <br>
+              <p style="font-size: 110%" class="light"> The essential matrix embeds transformation information as <b>E = t*R</b> where <b>R</b> is the rotation matrix and <b>t</b> is as follows:
+              <br>
+              $$ t =
+              \begin{bmatrix}
+              0 & -t_{z} & t_{y}\\
+              t_{z} & 0 & -t_{x}\\
+              -t_{y} & t_{x} & 0
+              \end{bmatrix}
+              $$
+              <br>
+
+              One can use Singular Value Decomposition(SVD) to decompose the essential matrix into <b>R</b> and <b>t</b>. An enthusiastic reader is encouraged to take a look at the paper for an efficient decomposition of <b>E</b> into <b>R</b> and <b>t</b>. <i>D. Nister, “An efficient solution to the five-point relative pose prob- lem,” in Proc. Computer Vision and Pattern Recognition (CVPR ’03)"</i>. Once you have decomposed the essential matrix, you can obtain the translation vector, <b>T</b> as <b>$$T = (t_{x}, t_{y}, t_{z})$$</b>
+
+              Now lets take a recap of what has happened so far by the following flow chart.<br><br>
+              <div align="center" style="font-size: 110%">
+                <b>
+                Feature detection in consecutive frames (ORB/SIFT/SURF/...)
+                $$\Downarrow$$
+                Descriptor matching(FLANN based/ BF)
+                $$\Downarrow$$
+                Outlier rejection(Ratio test/ RANSAC)
+                $$\Downarrow$$
+                Essential matrix computation (5 pt. / 8 pt. algorithm)
+                $$\Downarrow$$
+                Decomposition into Rotation matrix and Translation vector (SVD)
+                </b>
+              </div>
+              <br>
+              <p style="font-size: 120%" class="light">At this stage, the translation vector that you have obtained is to be corrected by a scaling factor. The next section describes how to do that.</p><br>
+
+
+              <p style="font-size: 120%" class="light"><b>
+                Relative scale adjustment</b>
+              </p>
+              <p style="font-size: 120%" class="light">The relative scale(<b>r</b>) for translation can be computed from the triangulated positions of a pair of features in two consecutive frames. <b>r</b> is actually the ratio of the distance between the feature points in <b>t<sup>th</sup></b> frame and the distance between them in <b>t-1<sup>th</sup></b> frame. Mathematically, $$r = \frac{||X_{t}^{i} - X_{t}^{j}||}{||X_{t-1}^{i} - X_{t-1}^{j}||} $$ where $X_{a}^{b}$ is the triangulated position of the $b^{th}$ feature point in frame $a$. Here, The translation vector is to be multiplied with this relative scale factor. 
+              <br><br><br>
+
+              At this stage you should be able to implement a basic version of visual odometry. So cheers! However one may notice that in large datasets or in case of loops a lot of drift may arise. This error is actually incremental and propagates through time. In order to deal with that, the following improvements are made. Note that these are some additional improvements on the basic design.
+              </p><br>
+
+              <p style="font-size: 120%" class="light"><b>
+                Feature binning</b>
+              </p>
+              <p style="font-size: 120%" class="light">Feature binning ensures that the features computed in each frame is distributed more or less uniformly throughout. One way to achieve that is by dividing the entire picture into rectangular grids and selected $k$ best features from each grid.
+              </p><br>
+
+              <p style="font-size: 120%" class="light"><b>
+                Feature tracking over multiple frames</b>
+              </p>
+              <p style="font-size: 120%" class="light">Until now we used the transformation matrix ($T_k$) obtained from the 2 consecutive frames to compute the current pose($C_k$) i.e. this transformation matrix, $T_k$ depends only on $k-1^{th}$ frame and $k^{th}$ frame and, $C_k = T_k.C_{k-1}$. If at any point of time some error gets introduced while estimating $T_k$, not only we will wrongly evaluate $C_k$, but also this error propagates which will introduce error for evaluating $C_{k+1}$, $C_{K+2}$, ... so on. Hence, it's better if we evaluate the current pose based on last 'n' frames in stead of the last frame only. In order to do so it's important to track features over multiple frames. Keeping track of features over multiple frames via feature matching at every new frame is expensive. A better approach would be to track detected features using <it>lucas kanade feature tracking algorithm</it> over multiple frames, and detect the features again once the number of features being tracked drops considerably. In this way computing features at every time step can be avoided, which gives a huge advantage for realtime applications.
+              </p><br>
+              
+              <p style="font-size: 120%" class="light"><b>
+                Windowed pose graph optimisation and bundle adjustment</b>
+              </p>
+              <p style="font-size: 120%" class="light">oola la! 
+              </p><br>
+
+              <br>
+            </div>
+          </div>
+        </div>
+  </div>
+
+
+  <!--footer-->
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About the Website</h5>
+          <p class="grey-text text-lighten-4">Thanks for visiting this page. This website gives a brief summary of my projects, research and experience. I maintain a blog where I write about my personal interests and findings. Feel free to check them out. Criticism is welcome. </p>
+
+
+        </div>
+        <div class="col l3 s12" style="margin-left:200px">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" align="center" href="https://www.facebook.com/satyaki.reloaded">facebook</a></li>
+            <li><a class="white-text" align="center" href="https://twitter.com/Cs15Satyaki">twitter</a></li>
+            <li><a class="white-text" align="center" href="https://in.linkedin.com/in/satyaki-chakraborty-a08b92a7">linked-in</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <script src="../dist/js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+
+</body>
+</html>
