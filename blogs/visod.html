@@ -54,14 +54,6 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <!--<h1 class="header center teal-text text-lighten-5">PROJECTS</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">feel free to collaborate on github.</h5>
-        </div>
-        <div class="row center">
-          <a href="https://github.com/shady-cs15?tab=repositories" target="_blank" id="download-button" class="btn-large waves-effect waves-light">GITHUB </a>
-        </div>
-        <br><br>-->
 			</div>
     </div>
 		<div class="parallax">
@@ -146,7 +138,15 @@
               $$
               <br>
 
-              One can use Singular Value Decomposition(SVD) to decompose the essential matrix into <b>R</b> and <b>t</b>. An enthusiastic reader is encouraged to take a look at the paper for an efficient decomposition of <b>E</b> into <b>R</b> and <b>t</b>. <i>D. Nister, “An efficient solution to the five-point relative pose prob- lem,” in Proc. Computer Vision and Pattern Recognition (CVPR ’03)"</i>. Once you have decomposed the essential matrix, you can obtain the translation vector, <b>T</b> as <b>$$T = (t_{x}, t_{y}, t_{z})$$</b>
+              One can use Singular Value Decomposition(SVD) to decompose the essential matrix into <b>R</b> and <b>t</b>. An enthusiastic reader is encouraged to take a look at the paper for an efficient decomposition of <b>E</b> into <b>R</b> and <b>t</b>. <i>D. Nister, “An efficient solution to the five-point relative pose prob- lem,” in Proc. Computer Vision and Pattern Recognition (CVPR ’03)"</i>. Once you have decomposed the essential matrix, you can obtain the translation vector as <b>$ (t_{x}, t_{y}, t_{z})$</b>. The transfomation matrix, $T_k$ between pose $C_{k-1}$ and $C_k$ can be formed from $R$ and $t$ as 
+              $$T_k = 
+              \begin{bmatrix}
+              R & t\\
+              O & 1
+              \end{bmatrix}
+              $$
+
+              where $R$ is a 3x3 matrix, $t$ is 3x1 vector, $O$ is 1x3 vector containing all zeros.
 
               Now lets take a recap of what has happened so far by the following flow chart.<br><br>
               <div align="center" style="font-size: 110%">
@@ -172,7 +172,15 @@
               <p style="font-size: 120%" class="light">The relative scale(<b>r</b>) for translation can be computed from the triangulated positions of a pair of features in two consecutive frames. <b>r</b> is actually the ratio of the distance between the feature points in <b>t<sup>th</sup></b> frame and the distance between them in <b>t-1<sup>th</sup></b> frame. Mathematically, $$r = \frac{||X_{t}^{i} - X_{t}^{j}||}{||X_{t-1}^{i} - X_{t-1}^{j}||} $$ where $X_{a}^{b}$ is the triangulated position of the $b^{th}$ feature point in frame $a$. Here, The translation vector is to be multiplied with this relative scale factor. 
               <br><br><br>
 
-              At this stage you should be able to implement a basic version of visual odometry. So cheers! However one may notice that in large datasets or in case of loops a lot of drift may arise. This error is actually incremental and propagates through time. In order to deal with that, the following improvements are made. Note that these are some additional improvements on the basic design.
+              At this stage you should be able to implement a basic version of visual odometry. So cheers! Now would be a good time to take a look at the <a href="https://github.com/shady-cs15/VisualOdometry" target="_blank">source code</a>.  However one may notice that in large datasets or in case of loops a lot of drift may arise. This error is actually incremental and propagates through time. </p><br>
+
+              <div align="center">
+              <iframe style="float:middle" width="480" height="315"
+              src="https://www.youtube.com/embed/fdR6FnMQbZs">
+              </iframe>
+              </div>
+
+              <br><br><p style="font-size: 120%" class="light">In order to deal with that, the following improvements are made. Note that these are some additional improvements on the basic design.
               </p><br>
 
               <p style="font-size: 120%" class="light"><b>
@@ -190,8 +198,18 @@
               <p style="font-size: 120%" class="light"><b>
                 Windowed pose graph optimisation and bundle adjustment</b>
               </p>
-              <p style="font-size: 120%" class="light">
+              <p style="font-size: 120%" class="light">Now that we have the track of a feature over say last $N$ frames, we will have a sequence of transformation matrices $\{T_{k-1}, T_{k-2}, ..., T_{k-N}\}$. Based on these transformation matrices and last N poses $\{C_{k-1}, C_{k-2}, ..., C_{k-N}\}$, we will be able to find the estimated current pose from each of the last N poses. That is, mathematically, we will be solving the following optimization problem.
+                $$ C_k = arg \ min_{C} \sum_{i=k-N}^{k-1}||C - T_i.C_i||^2 $$
+              The above problem is called the pose graph optimisation problem or more precisely in this case the windowed posed graph optimisation problem mainly because here we optimise the pose graph over a window of last 'N' frames. One important thing to note that this optimisation problem is non-linear. This is because of the orientation part of the pose vector which adds the non-linearity (through the trigonometric functions.) The solution to this nonlinear optimisation problem is discussed in my next blog post.
+
+              <br>
+
+              Especially in case of stereo visual odometry, one might consider optimising both the pose graph as well as the 3D point cloud together, which is taken care by windowed bundle adjustment. Windowed pose graph optimisation is thus a special case of windowed bundle adjustment which only optimises the poses. The corresponding optimisation problem here would be
+                $$ X_i, C_k = arg \ min_{X_i, C_k} \sum_{i, k} ||p_{i,k} - g(X_i, C_k)||^2 $$
+              Here, $X_i$ is the $i^{th}$ 3D point. $p_{i,k}$ is the projected position of $i^{th}$ 3D point in the image plane for pose 'k'. $g(A,B)$ is the projection function that projects 3D point A into the image plane for pose B. $||p_{i,k} - g(X_i, C_k)||$ is thus actually the so call the reprojection error which is to be minimised for bundle adjustment.
               </p><br>
+              <br>
+              <p align="right">December, 2015</p>
 
               <br>
             </div>
