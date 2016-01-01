@@ -123,9 +123,9 @@
               <img src="images/epipolar.jpg" align="middle"></img>
               </div>
               <br>
-              <p style="font-size: 110%" class="light"> The essential matrix embeds transformation information as <b>E = t*R</b> where <b>R</b> is the rotation matrix and <b>t</b> is as follows:
+              <p style="font-size: 110%" class="light"> The essential matrix embeds transformation information as <b>E = t'*R</b> where <b>R</b> is the rotation matrix and <b>t'</b> is as follows:
               <br>
-              $$ t =
+              $$ t' =
               \begin{bmatrix}
               0 & -t_{z} & t_{y}\\
               t_{z} & 0 & -t_{x}\\
@@ -134,7 +134,7 @@
               $$
               <br>
 
-              One can use Singular Value Decomposition(SVD) to decompose the essential matrix into <b>R</b> and <b>t</b>. An enthusiastic reader is encouraged to take a look at the paper for an efficient decomposition of <b>E</b> into <b>R</b> and <b>t</b>. <i>D. Nister, “An efficient solution to the five-point relative pose prob- lem,” in Proc. Computer Vision and Pattern Recognition (CVPR ’03)"</i>. Once you have decomposed the essential matrix, you can obtain the translation vector as <b>$ (t_{x}, t_{y}, t_{z})$</b>. The transfomation matrix, $T_k$ between pose $C_{k-1}$ and $C_k$ can be formed from $R$ and $t$ as 
+              One can use Singular Value Decomposition(SVD) to decompose the essential matrix into <b>R</b> and <b>t'</b>. An enthusiastic reader is encouraged to take a look at the paper for an efficient decomposition of <b>E</b> into <b>R</b> and <b>t'</b>. <i>D. Nister, “An efficient solution to the five-point relative pose prob- lem,” in Proc. Computer Vision and Pattern Recognition (CVPR ’03)"</i>. Once you have decomposed the essential matrix, you can obtain the translation vector as <b>$t = (t_{x}, t_{y}, t_{z})$</b>. The transfomation matrix, $T_k$ between pose $C_{k-1}$ and $C_k$ can be formed from $R$ and $t$ as 
               $$T_k = 
               \begin{bmatrix}
               R & t\\
