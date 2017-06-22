@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Project Slash: Generating guitar solos with neural networks</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+
+
+<body>
+
+
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../academia.html">Academia</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="https://github.com/shady-cs15" target="_blank">github.com/shady-cs15</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+	<!-- cover picture -->
+  <div id="index-banner" class="parallax-container" style="height:500px">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div style="height:200px; color:#000"></div>
+        <div class="section">
+          <!--<h1 class="text-lighten-5">Slash</h1>-->
+          <h3 style="font-family: Helvetica Neue; font-weight: 200"><b>Slash</b><br> Teaching neural networks how to rock n' roll<br></h3>
+          <div><a href="https://github.com/shady-cs15/slash.git"; target="_blank"; id="download-button"; class="btn-large waves-effect waves-light">Source Code </a></div>
+        </div>
+      </div>
+			</div>
+
+		<div class="parallax">
+			<img src="images/slash/slash.gif"></img>
+		</div>
+  </div>
+
+
+  <!--content-->
+  <br><br>
+  <div class="row" style="margin-left:40px" style="margin-top:40px; margin-right:40px">
+  			<div class="col s12">
+          <div class="card-content" style="margin-left:250px; margin-right:300px;" >
+              <h3 style="font-family: Helvetica Neue; font-weight: 300">
+                Project Slash
+              </h3>
+              <p class="grey-text text-darken-1" style="font-family: Helvetica Neue; font-weight: 200; font-size:150%">
+                Satyaki Chakraborty
+                (<a href="https://github.com/shady-cs15" target="_blank">
+                  <svg viewBox="0 0 16 16" height="16">
+                      <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path>
+                    </svg> shady-cs15
+                  </a>)
+                  <br>
+                  <span style="font-size:90%">May 2017
+                </span>
+                </p>
+
+              <br>
+              <p style="font-size:110%; font-weight: 400">
+                Neural networks are being used extensively these days as generative models. In the domain of audio generation, recurrent nets have
+                proved to be an essential tool for artifical audio synthesis primarily because of the sequential structure of audio data.
+                Here is an amazing <a href="https://magenta.tensorflow.org/2016/07/15/lookback-rnn-attention-rnn" target="_blank">blog post</a>
+                from Google Magenta on generating long term structures in songs (in MIDI form) with RNNs.
+                However, two recent breakthroughs in audio generation have dealt with audio in its rawest form i.e. wave form. One is Google's
+                <a href="https://deepmind.com/blog/wavenet-generative-model-raw-audio/" target="_blank">Wavenet</a> and
+                the other one is MILA's <a href="https://arxiv.org/abs/1612.07837" target="_blank">Samplernn</a>. Since both the inputs and the
+                outputs of the networks are raw waves(quantized), I wanted to see whether they can be used to generate polyphonic music like rock n' roll solos. And hence project slash!
+              </p>
+
+              <br>
+              <h5>Pros and Cons of generating raw audio waves</h5>
+              <p style="font-size:110%; font-weight: 400">
+                Networks trained on raw waves do not make any assumption of the data on which they are trained, which means, this
+                very same network that has been trained on a guitar music dataset to generate guitar solos can be used for generating human speech just by training
+                it on some speech dataset. Also unlike MIDI files, raw audio data is easily and abundantly available on the internet and doesnot require any high level
+                transcription.
+                <br>
+                Now the cons! Sampling rate for a studio grade experience is usually 44.1 kHz, which means there are 44,100 samples in just one
+                second of audio data. So, for generating just 5 seconds of audio data we need to generate 44,100 x 5 = 220,500 samples. Not only does this
+                make the training time longer by significant proportions, capturing long term dependencies is now more difficult than ever.
+              </p>
+
+              <br>
+              <h5>Time for some rock 'n roll</h5>
+              <p style="font-size:110%; font-weight: 400">
+                Let's start by taking a look at some of the samples generated by the neural network.</p>
+                <div width="720" height="200" id="canvas-1" align="center">
+                </div>
+
+                  <br>
+                  <div align="center">
+                  <audio id="aud" controls>
+                    <source id="sample" src="audio/slash/sample_0.wav" type="audio/wav">
+                  </audio>
+
+                  <div style="margin-top:20px">
+                    <a class="waves-effect waves-light btn" onclick="randomize()">Randomize</a>
+                  </div>
+                </div>
+
+              <br>
+              <h5>Understanding the architecture</h5>
+              <p style="font-size:110%; font-weight: 400">
+                The architecture that I developed is mostly based on that of Samplernn's (with some minor modifications here and there). Most of the reasons why I opted for this model is
+                described in this<a href="http://deepsound.io/samplernn_first.html" target="_blank"> blog post</a>. But before we go into the
+                details of the architecture of this model, let's first take a step back and try to figure out how we would use a simple RNN
+                to generate raw audio waves. </p>
+                <div align="center">
+                  <img src="images/slash/lstm.gif"></img><br>
+                  Fig: How the simplest RNN can be used to generate raw audio wave forms.
+                </div>
+
+                <p style="font-size:110%; font-weight: 400">
+                  Note that, at every time step we feed a portion(window) of the raw audio wave to the network to generate a sample and then
+                  slide the window by one sample to the right. We can repeat this process for several times to generate a sequence of samples,
+                  and thereby form an audio wave. But there is some significant redundancy with this approach. Let the input to the RNN at every time
+                  step be denoted by x<sub>t</sub>. Then, x<sub>t</sub> and x<sub>t+1</sub> have significant overlap (<i>overlap of window length - 1</i>).
+                  Not just that! Since we produce only one sample per output of the recurrent cell, we will need quite a significant number of iterations
+                  to generate even one second of audio data (<i>no. of iterations = sampling rate</i>). Thus capturing long term dependency in this case
+                  is a huge issue. <br><br>
+
+                  <i>Now we are slowly moving towards building the sampleRNN architecture. Point to note: What we don't want is overlapping windows!</i><br><br>
+
+                  So, at every iteration, we now slide the window by the length of the window to the right, in stead of sliding it by just one sample.
+                  And since, we are doing that, now at every iteration, we need to generate the next window of samples in stead of just generating the
+                  immediately next one.</p>
+
+                <div align="center">
+                  <img src="images/slash/no-over.gif"></img><br><br>
+                  Fig: Corresponding architecture with non-overlapping windows.
+                </div>
+
+                <p style="font-size:110%; font-weight: 400">
+                  <b>Now let's come to the original samplernn 2-tier architecture.</b> The previous approach solves our issue of overlapping windows.
+                  But still there is something missing. A sample that is being generated, most of the time is unaware of the sample (or series
+                  of samples) just preceeding it, unless it is the first sample of the window being generated. In order to solve this, all we need is
+                  one small modification in our architecture. For every sample that is being generated, use both the output from the RNN cell as well
+                  its local context(context of last <i>n</i> samples corresponding to the sample being generated).
+                </p>
+                <div align="center">
+                  <img src="images/slash/samp-rnn.gif"></img><br>
+                  Fig: Miniature version of the architecture used. It is encouraged to take a look at the<br> original sample rnn paper for the actual architecture of
+                <br>sample rnn for a clearer understanding.
+              </div>
+
+              <p style="font-size:110%; font-weight: 400">
+                Obviously, the actual architecture isn't just softmax after one recurrent layer. The version that I implemented in tensorflow has 3 recurrent(LSTM) layers,
+                followed by 3 MLP layers(along with downsampling and softmax), each of the layers having 1024 neurons. The architecure is implemented in
+                <a href="https://github.com/shady-cs15/slash/tree/master/src/model.py" target="_blank">src/model.py</a>. Also note that, the architecture that I've discussed
+                here is the 2-tier model of samplernn. There is a also a 3 tier version that uses recurrent layers operating at two different clock rates. For more details,
+                refer to their original paper.
+
+              </p>
+
+
+
+
+
+
+
+
+
+              <br>
+              <h5>How long till it learns to generate some music?</h5>
+              <p style="font-size:110%; font-weight: 400">
+
+              </p>
+
+
+
+
+              <br>
+              <h5>Source code and trained weights</h5>
+              <p style="font-size:110%; font-weight: 400">
+
+              </p>
+
+          </div>
+        </div>
+  </div>
+
+
+  <!--footer-->
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About the Website</h5>
+          <p class="grey-text text-lighten-4">Thanks for visiting this page. This website gives a brief summary of my projects, research and experience. I maintain a blog where I write about my personal interests and findings. Feel free to check them out. Criticism is welcome. </p>
+
+
+        </div>
+        <div class="col l3 s12" style="margin-left:200px">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" align="center" href="https://www.facebook.com/satyaki.reloaded">facebook</a></li>
+            <li><a class="white-text" align="center" href="https://twitter.com/Cs15Satyaki">twitter</a></li>
+            <li><a class="white-text" align="center" href="https://in.linkedin.com/in/satyaki-chakraborty-a08b92a7">linked-in</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <script src="../dist/js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+  <script src="../js/siriwave.js"></script>
+  <script type="text/javascript">
+    var disqus_shortname = 'satyakichakraborty';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+    function randomize() {
+      var audiosrc = document.getElementById("sample");
+      var audio = document.getElementById("aud");
+      audiosrc.src = "audio/slash/sample_1.wav";
+      audio.load();
+      audio.play();
+    }
+
+    var SW = new SiriWave({
+      width: 640,
+      height: 100,
+      amplitude: 0.5,
+      speed: 0.,
+      container: document.getElementById('canvas-1'),
+      autostart: true,
+      color: '#000'
+    });
+
+    var audio = document.getElementById("aud");
+    aud.onplay = function() {
+      SW.setSpeed(0.3);
+    };
+    aud.onended = function() {
+      SW.setSpeed(0.0);
+    }
+    aud.onpause = function() {
+      SW.setSpeed(0.0);
+    }
+  </script>
+
+</body>
+</html>
