@@ -1,99 +1,219 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <title>Satyaki Chakraborty</title>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    
-    ga('create', 'UA-83215168-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-</head>
+<title>Satyaki Chakraborty - Home</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 
+<script type="text/javascript" src="js/hidebib.js"></script>
+
+</head>
 <body>
-  <div style="width:800px; margin:auto; margin-bottom:100px">
-    <div style="min-height:275px">
-      <img src="images/cmu-dp.jpg" width=225 style="border-radius:15px;float:right;">
-      <div style="padding-right:265px">
-  <h1>Satyaki Chakraborty</h1>
-  <p>I am a Machine Learning Software Engineer working at Amazon Web Services (AWS, AI) on bayesian and deep AutoML. Before this, I was a graduate student in the <a href="http://ri.cmu.edu">Robotics Institute</a> at Carnegie Mellon University advised by <a href="http://www.cs.cmu.edu/~http://www.cs.cmu.edu/~hebert/">Martial Hebert</a>. My thesis was on "Learning to track object position through occlusion."</p>
-  <p>I completed my B.S. in Computer Science and Engineering from Jadavpur University, India, where I worked on loop closure identification in Simultaneous Localisation and Mapping (SLAM). </p>
-  <div style="justify-content:space-between;display:flex; padding: 0px 120px 0px 120px"><a href="mailto:satyaki.cs19@gmail.com">satyaki.cs19@gmail.com </a> <a href="https://github.com/shady-cs15">Github</a></div>
-      </div>
-    </div>
-    <div id="research">
-      <h2>Research</h2>
-      <div class="research_item">
-  <h3>A more abstractive text summarization model</h3>
-  <p>Pointer-generator network is an extremely popular method of text summarization. More recent works in this domain still build on top of the baseline pointer generator by augmenting a content selection phase, by decomposing the decoder into a contextual network and a language model, etc. However, all such models based on the pointer-generator base architecture cannot generate novel words in the summary and mostly copy words from the source text. 
-    In our work, we first thoroughly investigate why the pointer-generator network is unable to generate novel words, and then address that by adding an Out-of-vocabulary (OOV) penalty. This enables us to improve the amount of novelty/abstraction significantly. </p>
-      </div>
-      [<a href="http://arxiv.org/abs/2002.10959">arXiv</a>] [<a href="files/poster.pdf">poster</a>]  [<a href="https://github.com/shady-cs15/PGNet">code</a>]
-      <div class="research_item">
-        <div align="center">
-          <img src="images/vs_0.png" width=300 class="image"> <img src="images/vs1.png" width=300 class="image">
-        </div>
-  <h3>Learning to Track Object Position through Occlusion</h3>
-  <p>Being able to detect or track an object of interest through occlusion has been a long standing challenge for different autonomous tasks. Traditional methods that employ visual object trackers with explicit occlusion modeling experience drift and make several fundamental assumptions about the data. We propose to address this with a `tracking-by-detection` approach that builds upon the success of region based video object detectors. 
-    Our video level object detector uses a novel recurrent computational unit at its core that enables long term propagation of object features even under occlusion.
+
+<div class="section">
+<h1>Satyaki Chakraborty</h1>
+</div>
+<hr>
+
+<div class="section">
+<table>
+  <tr valign="top"> <td style="width: 600px; vertical-align: top;">
+  I am a Machine Learning Engineer at Amazon Web Services AI</a>, Seattle, WA, USA. Before this, I was a graduate student in the <a href="http://ri.cmu.edu">Robotics Institute</a> at Carnegie Mellon University advised by <a href="http://www.cs.cmu.edu/~http://www.cs.cmu.edu/~hebert/">Martial Hebert</a>. My thesis was on "Learning to track object position through occlusion."</p>
+  <p>I completed my B.S. in Computer Science and Engineering from Jadavpur University, India, where I worked on loop closure identification in Simultaneous Localisation and Mapping (SLAM).</p>
+  <p><br></p>
+  <p>
+    <a href="javascript:toggleblock('email')">email</a> | <a href="https://github.com/shady-cs15">github</a>  | <a href="https://www.ri.cmu.edu/publications/learning-to-detect-occluded-objects-in-videos/">thesis</a> | <a href="https://scholar.google.com/citations?user=MY1Z5fgAAAAJ&hl=en">google scholar</a>
   </p>
-  <i>under review, CVPR 2020</i> [<a href="https://github.com/shady-cs15/Detectron.pytorch.rnn">code</a>]
-  <div align="center">
-    <img src="images/mtoccl.png" width=300 class="image"> <!--style="border-radius:15px;float:right;"-->
+  <pre xml:space="preserve" id="email" style="font-size: 12px">
+
+schakra1 AT alumni DOT cmu DOT edu
+  </pre>
+  <script xml:space="preserve" language="JavaScript">
+  hideblock('email');
+  </script>
+  </td>
+
+  <td width="400"><img src="cmu-dp.jpg" alt="My picture" height=250 align="right"/></td>
+    </tr>
+  </table>
+</div>
+
+<div class="section">
+<h2> Publications </h2>
+<!--------------------------------------------------------------------------->
+<div class="paper" id="cvpr20occl">
+<img class="paper" src="figures/cvpr20occl.png" />
+<p><b id="papertitle">Learning to Track Object Position through Occlusion</b> <br/> 
+<p> <strong style="color:red">[New]</strong>
+<strong>Satyaki Chakraborty</strong>, Martial Hebert <br/> 
+CVPR, 2020 workshop (under review)<br/> 
+<a href="#">pdf </a>  &nbsp <a href="javascript:toggleblock('cvpr20occlAbs')">abstract </a> </p>
+<div class="papermeta" id="cvpr20acsmMeta">
+<em id="cvpr20occlAbs">Being able to detect or track an object of interest through occlusion has been a long standing challenge for different autonomous tasks. Traditional methods that employ visual object trackers with explicit occlusion modeling experience drift and make several fundamental assumptions about the data. We propose to address this with a `tracking-by-detection` approach that builds upon the success of region based video object detectors. Our video level object detector uses a novel recurrent computational unit at its core that enables long term propagation of object features even under occlusion.</em>
+<script language="javascript" type="text/javascript" xml:space="preserve">
+hideblock('cvpr20occlAbs');
+</script>
+</div>
+</div>
+<!--------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<div class="paper" id="JASF17deconv">
+  <img class="paper" src="figures/JASF17deconv.jpg" />
+  <!--<p> <strong style="color:red">[New]</strong>-->
+  <p><b id="papertitle">Detection of loop closure in SLAM: A DeconvNet based approach</b> <br/> 
+    Aritra Mukherjee*, <strong>Satyaki Chakraborty*</strong>, Sanjoy K. Saha<br/> 
+  Journal of Applied Soft Computing, 2017, 80 650-656<br/> 
+  <a href="https://www.sciencedirect.com/science/article/abs/pii/S1568494619302339">pdf </a>  &nbsp <a href="javascript:toggleblock('JASF17deconvAbs')">abstract </a> </p>
+  <div class="papermeta" id="JASF17deconvMeta">
+  <em id="JASF17deconvAbs">The problem of Simultaneous Localization and Mapping(SLAM) suffers from drift in long run odometry and the only way to correct that is by graph optimization based on loop closure detection, where a robot is able to correct its location precisely if it detects that it is at a place which was visited before. The traditional approaches for recognizing known places follow a feature-based bag-of-words model which discards certain geometric and structural information. The proposed methodology represents a scene as low-dimensional vector using a deep deconvolution network. A 12-layer deconvolution net has been proposed that encodes and decodes an image to itself to learn the representation. The use of locally connected autoencoders in the network drastically reduces the dimension without significant loss in retaining the contextual information. Loop closure is identified by comparing such representations. Sequences from KITTI visual odometry dataset and new college dataset are used for evaluation. Performance is compared with state-of-the-art techniques and found satisfactory.</em>
+  <script language="javascript" type="text/javascript" xml:space="preserve">
+  hideblock('JASF17deconvAbs');
+  </script>
+  </div>
+  </div>
+<!--------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<div class="paper" id="ICPR16lrpr">
+  <img class="paper" src="figures/ICPR16lrpr.png" />
+  <!--<p> <strong style="color:red">[New]</strong>-->
+  <p><b id="papertitle">Learning deep representations for Place Recognition in SLAM <p> <strong style="color:red">[best student paper]</strong></b> <br/> 
+    Aritra Mukherjee*, <strong>Satyaki Chakraborty*</strong>, Sanjoy K. Saha<br/> 
+    7th International Conference on Pattern Recognition and Machine Intelligence 2016<br/> 
+  <a href="http://shady-cs15.github.io/files/lrpr.pdf">pdf </a>  &nbsp <a href="javascript:toggleblock('ICPR16lrprAbs')">abstract </a> </p>
+  <div class="papermeta" id="ICPR16lrprMeta">
+  <em id="ICPR16lrprAbs">Traditional approaches for recognising known places follow a feature-based bag-of-words model while discarding certain geometric and structural information. In order to improve real-time query performance, we take a slightly different approach by learning low-dimensional global representation vectors using a deconvolution net. Proposed 12-layer deconvolution net encodes and decodes an image to itself and in the process learns a representation of the image in a reduced feature space, it is then used for comparing one image with another to identify loop closures.</em>
+  <script language="javascript" type="text/javascript" xml:space="preserve">
+  hideblock('ICPR16lrprAbs');
+  </script>
+  </div>
+  </div>
+<!--------------------------------------------------------------------------->
+
+<!--------------------------------------------------------------------------->
+<div class="paper" id="WAF16jde">
+  <img class="paper" src="figures/WAF16jde.png" />
+  <!--<p> <strong style="color:red">[New]</strong>-->
+  <p><b id="papertitle">Making compatible two robotic middlewares: ROS and JdeRobot<p></b> 
+    <strong>Satyaki Chakraborty</strong>, JoseMaria C. Plaza<br/> 
+    Proceedings of the XVII Workshop on Physical Agents (WAF-2016)<br/> 
+  <a href="https://gsyc.urjc.es/jmplaza/papers/waf2016-roscompatibility.pdf">pdf </a>  &nbsp <a href="javascript:toggleblock('WAF16jdeAbs')">abstract </a> </p>
+  <div class="papermeta" id="WAF16jdeMeta">
+  <em id="WAF16jdeAbs">In contrast with other fields, robotic
+    software has its own requirements like real time and robustness.
+    In the last years several middlewares have appeared in the
+    robotics community that make easier the creation of robotiWAF16c
+    applications and improve their reusability. Maybe ROS (Robot
+    Operating System) is the most widespread one, with a wide user
+    and developer community. This paper presents the work towards
+    making compatible two of them, JdeRobot and ROS, both component oriented. A compatibility library has been developed that
+    allows JdeRobot components to directly interoperate with ROS
+    drivers, exchanging ROS messages with them. Two experiments
+    are presented that experimentally validate the approach</em>
+  <script language="javascript" type="text/javascript" xml:space="preserve">
+  hideblock('WAF16jdeAbs');
+  </script>
+  </div>
+  </div>
+<!--------------------------------------------------------------------------->
+</div>
+
+<!--------------------------------------------------------------------------->
+<div class="section">
+  <h2> Research projects / Tech reports</h2>
+  <!--------------------------------------------------------------------------->
+  <div class="paper" id="pgnet-oov">
+  <img class="paper" src="figures/pgnet-oov.png" />
+  <!--<p> <strong style="color:red">[New]</strong>-->
+  <p><b id="papertitle">Improving abstraction in Pointer Generator summaries, 2019</b> <br/> 
+  <strong>Satyaki Chakraborty</strong>, Xinya Li, Sayak Chakraborty <br/> 
+  <a href="https://arxiv.org/abs/2002.10959">pdf </a>  &nbsp <a href="javascript:toggleblock('pgnet-oovAbs')">abstract </a> </p>
+  <div class="papermeta" id="pgnet-oovMeta">
+  <em id="pgnet-oovAbs">Pointer-generator network is an extremely popular method of text summarization. More recent works in this domain still build on top of the baseline pointer generator by augmenting a content selection phase, or by decomposing the decoder into a contextual network and a language model. However, all such models that are based on the pointer-generator base architecture cannot generate novel words in the summary and mostly copy words from the source text. In our work, we first thoroughly investigate why the pointer-generator network is unable to generate novel words, and then address that by adding an Out-of-vocabulary (OOV) penalty. This enables us to improve the amount of novelty/abstraction significantly. We use normalized n-gram novelty scores as a metric for determining the level of abstraction. Moreover, we also report rouge scores of our model since most summarization models are evaluated with R-1, R-2, R-L scores.</em>
+  <script language="javascript" type="text/javascript" xml:space="preserve">
+  hideblock('pgnet-oovAbs');
+  </script>
   </div>
 </div>
-  
-      <div class="research_item">
-  <h3>Deep Representations for Place Recognition in SLAM</h3>
-  <p>Traditional approaches for recognising known places follow a feature-based bag-of-words model while discarding certain geometric and structural information. In order to improve real-time query performance, we take a slightly different approach by learning low-dimensional global representation vectors using a deconvolution net. Proposed 12-layer deconvolution net encodes and decodes an image to itself and in the process learns a representation of the image in a reduced feature space, it is then used for comparing one image with another to identify loop closures.</p>
-      </div>
-      <div class="research_item">
-  <i>best student paper award</i>, 7th International conference on Pattern Analysis and Machine Intelligence
-  [<a href="files/lrpr.pdf">paper</a>] [<a href="https://github.com/shady-cs15/lrpr">code</a>]
 
-
-  <div align="center">
-    <img src="images/lrpr.png" width=300 class="image">
-  </div>
-  </div>
-  <h3>Detecting small objects from aerial views with hierarchical deconvolution nets</h3>
-  <p>Traditional object detection algorithms fail to perform well when it comes to detecting small objects from aerial views simply due to the scale factor. We use context and exploit spatial relationship between different entities in the scene to narrow down the search space. This is done using a hierarchy of deconvolution networks with each level of the hierarchy trying to predict a heatmap of a certain resolution.
-     <i>CMU RI tech report archive</i> [<a href="files/cmu-ri.pdf">report</a>] </p>
-      </div>
-      <div class="research_item">
-  <div align="center">
-    <img src="images/hdn.png" width=300 class="image">
-  </div>
-  <h3>Cross Lingual Dependency Parsing</h3>
-  <p>Most Natural Language Processing tasks including, but not limited to, Dependency Parsing require large amounts of annotated data. The creation of these lexical resources for training requires considerable effort by skilled lexicographers, and are hence not feasible for all languages. We present a novel technique to overcome this data scarsity by applying a Recursive Neural Network based Shift Reduce Transition Dependency Parser trained on Word Vector models in one language to parse in another, by using only a Translation Matrix learned from a small Bilingual Dictionary.</i> 
-    [<a href="files/nlp_report.pdf">paper</a>]</p>
-  <div align="center">
-    <img src="images/nlp.png" width=300 class="image">    
-  </div>
-  </div>
-  
-
-  <div id="Achievements">
-      <h2>Achievements</h2>
-      <p> Received NSF scholarship grant (2017) covering full tuition support and stipend during master's program. </p>
-      <p> One of 30 recipients of the S N Bose scholarship (2016) out of a pool of 1000+ applicants. The scholarship is awarded by the Indo-US Science and Technology Forum (IUSSTF) to select exchange visitors each year. </p>
-      <p> Merit rank secured 06 out of 10 million odd students who took 10th Standard WBBSE examination 2011. Recipient of State Governor award for academic excellence. </p>
+  <div class="paper" id="face-fsl">
+    <img class="paper" src="figures/face-fsl.png" />
+    <!--<p> <strong style="color:red">[New]</strong>-->
+    <p><b id="papertitle">Eliminating intra-class variance in classification networks with Adversarial Losses, 2019</b> <br/> 
+      Siva Chaitanya Mynepalli, <strong>Satyaki Chakraborty</strong>, Rishi Madhok<br/> 
+    <a href="files/face-fsl.pdf">pdf </a>  &nbsp <a href="javascript:toggleblock('face-fslAbs')">abstract </a> </p>
+    <div class="papermeta" id="face-fslMeta">
+    <em id="face-fslAbs">The established procedure to train classification neural networks has been to employ a softmax layer to classify an embedding into given number of classes. The softmax function approximates boundaries between classes as angular bisectors in N-dimensional space. Therefore, there is huge variance in the embeddings of a given class. It is neces- sary to eliminate this intra-class variation to confidently identify out-of- distribution samples while employing a classification network in the real world. Additionally, eliminating intra-class variance might lead to perfor- mance gains in face recognition algorithms, as has been observed previ- ously. In this project, we would explore novel ways of reducing intra-class variance. Particularly, we propose to employ an adversarial network to penalize intra-class variance thereby eliminating variation in the original classification network.
+    </em>
+    <script language="javascript" type="text/javascript" xml:space="preserve">
+    hideblock('face-fslAbs');
+    </script>
     </div>
   </div>
-  <!--
-    <div id="other">
-      <h2>Other</h2>
-      Outside of research, I enjoy experimental baking, swing dancing, and <a href="http://mitathletics.com/sports/w-crewlt/2016-17/bios/dean_victoria_wyh0">rowing</a>.<br><br>
-      I co-founded <a href="http://codeforgood.mit.edu">Code for Good</a>, an MIT student group that works with Boston-area nonprofits on technical projects.<br><br>
-      Languages: English (native), Mandarin (conversational), Spanish (beginner)</div>
+
+  <div class="paper" id="multigoal-drl">
+    <img class="paper" src="figures/multigoal-drl.png" />
+    <p><b id="papertitle">Multigoal reinforcement learning with conditional variational auto-encoders, 2018</b> <br/> 
+      Maximilian Sieb, Hariank Muthakana, <strong>Satyaki Chakraborty</strong><br/> 
+    <a href="files/multigoal-drl.pdf">pdf </a>  &nbsp <a href="javascript:toggleblock('multigoal-drlAbs')">abstract </a> </p>
+    <div class="papermeta" id="multigoal-drlMeta">
+    <em id="multigoal-drlAbs">Multi-goal and multi-task reinforcement learning are interesting topics that have gotten a lot of attention lately. Given an environment and a goal, how do we transfer knowledge and policies to another goal or another task? In this work, we investigate multi-goal/multi-task learning using variational autoencoders (VAEs). We work in the MuJoCo environment, which has high-dimensional state-space representation as well as complex goals and tasks.
+    </em>
+    <script language="javascript" type="text/javascript" xml:space="preserve">
+    hideblock('multigoal-drlAbs');
+    </script>
     </div>
   </div>
-  -->
+
+  <div class="paper" id="hdnn">
+    <img class="paper" src="figures/hdnn.png" />
+    <p><b id="papertitle">Small object detection with heirarchical deconvolution nets, 2016</b> <br/> 
+      <strong>Satyaki Chakraborty</strong>, Daniel Maturana, Sebastian Scherer<br/> 
+    <a href="https://www.ri.cmu.edu/publications/detecting-cars-in-aerial-photographs-with-a-hierarchy-of-deconvolution-nets/">pdf </a>  &nbsp <a href="javascript:toggleblock('hdnnAbs')">abstract </a> </p>
+    <div class="papermeta" id="hdnnMeta">
+    <em id="hdnnAbs">Detecting cars in large aerial photographs can be quite a challenging task, given that cars in such datasets are often barely visible to the naked human eye. Traditional object detection algorithms fail to perform well when it comes to detecting cars under such circumstances. One would rather use context or exploit spatial relationship between different entities in the scene to narrow down the search space. We aim to do so by looking at different resolutions of the image to process context and focus on promising areas. This is done using a hierarchy of deconvolution networks with each level of the hierarchy trying to predict a heatmap of a certain resolution. We show that our architecture is able to model context implicitly and use it for finer prediction and faster search.
+    </em>
+    <script language="javascript" type="text/javascript" xml:space="preserve">
+    hideblock('hdnnAbs');
+    </script>
+    </div>
+  </div>
+
+<!--------------------------------------------------------------------------->
+<!--- TEMPLATE
+<div class="paper" id="paperId">
+  <img class="paper" title="X" src="images/X.png" />
+  <p><b id="papertitle">Title</b> <br/>
+  <strong>Shubham Tulsiani</strong>, Richard Tucker, Noah Snavely<br />
+  ECCV, 2018<br />
+  <a href="link">pdf</a>  &nbsp <a href="page">project page</a>  &nbsp <a href="javascript:toggleblock('paperIdAbs')">abstract</a> &nbsp <a href="javascript:toggleblock('paperIdBib')">bibtex</a>  &nbsp <a href="codelink">code</a> </p>
+
+  <div class="papermeta" id="paperIdMeta">
+  <em id="paperIdAbs">ABSTRACT</em></p>
+  <pre xml:space="preserve" id="paperIdBib" style="font-size: 12px">
+@inProceedings{
+BIBTEX
+}</pre></td>
+  <script language="javascript" type="text/javascript" xml:space="preserve">
+     hideblock('paperIdAbs');
+     hideblock('paperIdBib');
+  </script>
+  </div>
+</div>
+
+-->
+<!--------------------------------------------------------------------------->
+</div>
+
+<div class="section">
+  <h2>Achievements</h2> </br>
+  <p> - Received NSF scholarship grant (2017) covering full tuition support and stipend during master's program. </p> </br>
+  <p> - One of 30 recipients of the S N Bose scholarship (2016) out of a pool of 1000+ applicants. The scholarship is awarded by the Indo-US Science and Technology Forum (IUSSTF) to select exchange visitors each year. </p> </br>
+  <p> - Merit rank secured 06 out of 10 million odd students who took 10th Standard WBBSE examination 2011. Recipient of State Governor award for academic excellence. </p> </br>
+</div>
+
+</div>
+
 </body>
 </html>
